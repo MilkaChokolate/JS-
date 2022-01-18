@@ -372,4 +372,22 @@
         if (number === 2 || number === 3) {
           alert('Вы ввели число 2, а может и 3');
         }*/
+        
+   function checkAge(age){
+        return (age > 18) ? true : confirm('Родители разрешили?');
+    }
+    let age = prompt('Ваш возраст', '');
+
+    function checkAge2(age){
+        return (age > 18) ||(confirm('Родители разрешили?'));
+    }
+    checkAge2(age);
+        /*26.Переделать функцию с помощью ? и ||
+        function checkAge(age) {
+          if (age > 18) {
+            return true;
+          } else {
+            return confirm('Родители разрешили?');
+          }
+        }*/
     </script>
