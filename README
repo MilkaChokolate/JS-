@@ -31,7 +31,37 @@ index.html:
                       message = 'Нет логина';
                     } else {
                       message = '';
-                    }            
+                    } 
+24.Переделать конструкцию switch в for
+                    switch (browser) {
+                      case 'Edge':
+                        alert( "You've got the Edge!" );
+                        break;
+
+                      case 'Chrome':
+                      case 'Firefox':
+                      case 'Safari':
+                      case 'Opera':
+                        alert( 'Okay we support these browsers too' );
+                        break;
+
+                      default:
+                        alert( 'We hope that this page looks ok!' );
+                    }
+25. Переделать конструкцию for в switch
+const number = +prompt('Введите число между 0 и 3', '');
+
+                      if (number === 0) {
+                        alert('Вы ввели число 0');
+                      }
+
+                      if (number === 1) {
+                        alert('Вы ввели число 1');
+                      }
+
+                      if (number === 2 || number === 3) {
+                        alert('Вы ввели число 2, а может и 3');
+                      }
 script.js
 1.Напишите псевдокод по задаче:
 В функции вывести в консоль лог единицы трехзначного числа, поданного в параметры функции.Например, 125 => 1 сот; 2 дес; 5 ед”
