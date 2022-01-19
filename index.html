@@ -399,4 +399,13 @@
         console.log(sum);
     }
     sum(salaries);// 27. Поститать зп
+        
+            function multiplyNumeric(obj){
+        for (let key in obj){
+            if (typeof obj[key] == "number"){
+                obj[key] = obj[key]*2;
+            }
+        }
+        console.log(obj);
+    }// 28.Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2
     </script>
