@@ -438,5 +438,26 @@
     alert( calculator.mul() );/*30.Создайте объект calculator (калькулятор) с тремя методами:
                                     read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
                                     sum() (суммировать) возвращает сумму сохранённых значений.
-                                    mul() (умножить) перемножает сохранённые значения и возвращает результат./*
+                                    mul() (умножить) перемножает сохранённые значения и возвращает результат.*/
+     
+   function Calculator(){
+      this.read = function (){
+          let x = +prompt('Введите первую координату', '');
+          let y = +prompt('Введите вторую координату', '');
+          this.x = x;
+          this.y = y;
+          return(this);
+      };
+      this.sum = function (){
+          return (this.x + this.y);
+      };
+      this.mul = function () {
+          return (this.x * this.y);
+      }
+    }
+
+    let calculator = new Calculator();
+    calculator.read();
+    alert( "Sum=" + calculator.sum() );
+    alert( "Mul=" + calculator.mul() );//31.Создать конструктор объекта с методами.
     </script>
