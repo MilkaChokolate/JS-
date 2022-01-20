@@ -414,4 +414,29 @@
     };
 
     let clone = Object.assign({}, user);//28.Создание независимого клона объекта
+    
+    
+        
+     let calculator = {
+      read : function (){
+          let x = +prompt('Введите первую координату', '');
+          let y = +prompt('Введите вторую координату', '');
+          this.x = x;
+          this.y = y;
+          return(this);
+      },
+      sum : function (){
+          return (this.x + this.y)
+      },
+      mul : function () {
+          return (this.x * this.y)
+      }
+    };
+
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );/*30.Создайте объект calculator (калькулятор) с тремя методами:
+                                    read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
+                                    sum() (суммировать) возвращает сумму сохранённых значений.
+                                    mul() (умножить) перемножает сохранённые значения и возвращает результат./*
     </script>
