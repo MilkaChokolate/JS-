@@ -482,4 +482,12 @@
       let rand = min + Math.random() * (max + 1 - min);
       return Math.floor(rand);
     }//34.Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
+    
+    let str = "Ослик Иа-Иа посмотрел на виадук";
+let target = "Иа";
+
+let pos = -1;
+while ((pos = str.indexOf(target, pos + 1)) != -1) {
+  alert( pos );
+}// 35. Найти все позиции подстрок в строке
     </script>
