@@ -506,4 +506,12 @@ function truncate(str, maxlength) {
     str.slice(0, maxlength - 1) + '…' : str;
 }//38.Создайте функцию truncate(str, maxlength), которая проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на "…", так,
  //чтобы её длина стала равна maxlength.
+        
+let users = [
+  {id: 1, name: "Вася"},
+  {id: 2, name: "Петя"},
+  {id: 3, name: "Маша"}
+];
+let user = users.find(item => item.id == 1);
+alert(user.name); // Вася
     </script>
