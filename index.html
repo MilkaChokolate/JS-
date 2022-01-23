@@ -490,4 +490,10 @@ let pos = -1;
 while ((pos = str.indexOf(target, pos + 1)) != -1) {
   alert( pos );
 }// 35. Найти все позиции подстрок в строке
+
+function checkSpam(str) {
+  let lowerStr = str.toLowerCase();
+
+  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}//36.Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.
     </script>
