@@ -534,4 +534,11 @@ function compareNumeric(a, b) {
 let arr = [ 1, 2, 15 ];
 arr.sort(compareNumeric);
 alert(arr);  // 1, 2, 15
+        
+        
+function filterRange(arr, a, b){
+     return arr.filter(item => ( (item >= a)&&(item <= b) ));
+}
+console.log(filterRange([1,2,3,4,5,6], 1, 4))//Напишите функцию filterRange(arr, a, b), которая принимает массив arr, ищет в нём элементы между a и b и отдаёт массив этих элементов.
+//Функция должна возвращать новый массив и не изменять исходный.
     </script>
