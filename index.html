@@ -484,16 +484,26 @@
     }//34.Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
     
     let str = "Ослик Иа-Иа посмотрел на виадук";
-let target = "Иа";
+    let target = "Иа";
 
-let pos = -1;
-while ((pos = str.indexOf(target, pos + 1)) != -1) {
-  alert( pos );
-}// 35. Найти все позиции подстрок в строке
+    let pos = -1;
+    while ((pos = str.indexOf(target, pos + 1)) != -1) {
+      alert( pos );
+    }// 35. Найти все позиции подстрок в строке
 
 function checkSpam(str) {
   let lowerStr = str.toLowerCase();
-
   return lowerStr.includes('viagra') || lowerStr.includes('xxx');
 }//36.Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.
+ 
+function ucFirst(str) {
+  if (!str) return str;
+  return str[0].toUpperCase() + str.slice(1);
+}//37.Напишите функцию ucFirst(str), возвращающую строку str с заглавным первым символом.
+        
+function truncate(str, maxlength) {
+  return (str.length > maxlength) ?
+    str.slice(0, maxlength - 1) + '…' : str;
+}//38.Создайте функцию truncate(str, maxlength), которая проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на "…", так,
+ //чтобы её длина стала равна maxlength.
     </script>
