@@ -522,6 +522,16 @@ let users = [
   {id: 3, name: "Маша"}
 ];
 // возвращает массив, состоящий из двух первых пользователей
-let someUsers = users.filter(item => item.id < 3);
+ let someUsers = users.filter(item => item.id < 3);
 alert(someUsers.length); // 2
+
+        
+function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+}
+let arr = [ 1, 2, 15 ];
+arr.sort(compareNumeric);
+alert(arr);  // 1, 2, 15
     </script>
