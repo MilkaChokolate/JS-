@@ -596,5 +596,17 @@ console.log(filterRange([1,2,3,4,5,6], 1, 4))//Напишите функцию f
       id: user.id
     }));//46.У вас есть массив объектов user, и у каждого из объектов есть name, surname и id.
     //Напишите код, который создаст ещё один массив объектов с параметрами id и fullName, где fullName – состоит из name и surname.
-
+    
+        
+    let obj = {
+      name: "John",
+      age: 30
+    };
+    let map = new Map(Object.entries(obj));//47.Из объекта коллекцию
+        
+    let prices = Object.fromEntries([
+      ['banana', 1],
+      ['orange', 2],
+      ['meat', 4]
+    ]);//47. Из коллекции объект
     </script>
