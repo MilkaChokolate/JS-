@@ -477,4 +477,9 @@
     function random(min, max) {
       return min + Math.random() * (max - min);
     }//33.Напишите функцию random(min, max), которая генерирует случайное число с плавающей точкой от min до max (но не включая max).
+     
+    function randomInteger(min, max) {
+      let rand = min + Math.random() * (max + 1 - min);
+      return Math.floor(rand);
+    }//34.Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
     </script>
