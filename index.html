@@ -541,4 +541,60 @@ function filterRange(arr, a, b){
 }
 console.log(filterRange([1,2,3,4,5,6], 1, 4))//Напишите функцию filterRange(arr, a, b), которая принимает массив arr, ищет в нём элементы между a и b и отдаёт массив этих элементов.
 //Функция должна возвращать новый массив и не изменять исходный.
+       
+    function filterRangeInPlace(arr, a, b){
+        for (let i = 0; i <arr.length; i++){
+            if (arr[i] < a || arr[i] > b){
+                arr.splice(i, 1);
+                i--;
+            }
+        }
+        return arr;
+    }
+    console.log(filterRangeInPlace([1,2,3,4,5,6,7,8,9], 2, 5));
+    //40.Напишите функцию filterRangeInPlace(arr, a, b), которая принимает массив arr и удаляет из него все значения кроме тех, которые находятся между a и b.
+    // То есть, проверка имеет вид a ≤ arr[i] ≤ b.
+    //Функция должна изменять принимаемый массив
+
+
+    let arr = [5, 2, 1, -10, 8];
+    arr.sort((a, b) => b - a);//41.Сортировать массив по убыванию
+
+
+    let vasya = { name: "Вася", age: 25 };
+    let petya = { name: "Петя", age: 30 };
+    let masha = { name: "Маша", age: 28 };
+    let users = [ vasya, petya, masha ];
+
+    let names = users.map(item => item.name);//42.У вас есть массив объектов user, и в каждом из них есть user.name. Напишите код,
+    // который преобразует их в массив имён.
+
+
+    function getAverageAge(users) {
+      return Math.round(users.reduce((prev, user) => prev + user.age, 0) / users.length);
+    }
+    console.log(getAverageAge(users));//43.Напишите функцию getAverageAge(users), которая принимает массив объектов со свойством age и возвращает средний возраст.
+
+
+    function sortByAge(arr) {
+      arr.sort((a, b) => a.age > b.age ? 1 : -1);
+    }//44.Напишите функцию sortByAge(users), которая принимает массив объектов со свойством age и сортирует их по нему.
+
+    function copySorted(arr) {
+        //Для копирования массива используем slice() и тут же – сортировку:
+      return arr.slice().sort();
+    }
+    console.log(copySorted(["HTML", "JavaScript", "CSS"]));//45.Скопируем и отсортируем массив
+
+
+    let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+    let petya = { name: "Петя", surname: "Иванов", id: 2 };
+    let masha = { name: "Маша", surname: "Петрова", id: 3 };
+    let users = [ vasya, petya, masha ];
+    let usersMapped = users.map(user => ({
+      fullName: `${user.name} ${user.surname}`,
+      id: user.id
+    }));//46.У вас есть массив объектов user, и у каждого из объектов есть name, surname и id.
+    //Напишите код, который создаст ещё один массив объектов с параметрами id и fullName, где fullName – состоит из name и surname.
+
     </script>
