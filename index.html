@@ -616,4 +616,61 @@ console.log(filterRange([1,2,3,4,5,6], 1, 4))//Напишите функцию f
     function unique(arr) {
       return Array.from(new Set(arr));
     }//48.Создайте функцию unique(arr), которая вернёт массив уникальных, не повторяющихся значений массива arr.
+        
+     
+        
+ let prices = {
+  banana: 1,
+  orange: 2,
+  meat: 4,
+};
+
+let doublePrices = Object.fromEntries(
+  // преобразовать в массив, затем map, затем fromEntries обратно объект
+  Object.entries(prices).map(([key, value]) => [key, value * 2])
+);//49. У нас есть объект с ценами, и мы хотели бы их удвоить
+        
+        
+        
+    let salaries = {
+      "John": 100,
+      "Pete": 300,
+      "Mary": 250
+    };
+    function sumSalaries(salaries){
+        let sum = 0;
+        for (let salary of Object.values(salaries)){
+            sum += salary;
+        }
+        return sum;
+    }
+    console.log(sumSalaries(salaries));//50.Напишите функцию sumSalaries(salaries), которая возвращает сумму всех зарплат с помощью метода Object.values и цикла for..of.
+        
+        
+        
+    let user = {
+      name: "John",
+      years: 30
+    };
+    let {name,years : age, isAdmin = false} = user;/*51.У нас есть объект:
+                                let user = {
+                                  name: "John",
+                                  years: 30
+                                };
+                                Напишите деструктурирующее присваивание, которое:
+                                свойство name присвоит в переменную name.
+                                свойство years присвоит в переменную age.
+                                свойство isAdmin присвоит в переменную isAdmin (false, если нет такого свойства)*/
+        
+        
+ let start = new Date(); // начинаем отсчёт времени
+
+// выполняем некоторые действия
+for (let i = 0; i < 100000; i++) {
+  let doSomething = i * i * i;
+}
+
+let end = new Date(); // заканчиваем отсчёт времени
+
+alert( `Цикл отработал за ${end - start} миллисекунд` );//52.Измерение времени
     </script>
