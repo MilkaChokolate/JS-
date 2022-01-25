@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+//1.Простейший пример рекурсии
+function pow(x, n) {
+  if (n == 1) {
+    return x;
+  } else {
+    return x * pow(x, n - 1);
+  }
+}
+
+
+function sumTo1(n){
+    let sum = 0;
+    for (let i = 0; i <= n; i++){
+        sum += i;
+    }
+    return sum;
+}//Вариант с циклом
+
+function sumTo2(n) {
+    return (n === 1) ? n : n + sumTo2(n-1);
+}//Вариант с рекурсией
+
+function sumTo3(n){
+   return (n*(n+1/2));
+}//Вариант с формулой
+
+
+
+</script>
+<body>
+</body>
+
+</html>
