@@ -35,6 +35,31 @@ function sumTo3(n){
 let clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(obj));//3.Создать клон объекта с флагами
 
 
+    
+function delay(f, ms) {
+  return function() {
+    setTimeout(() => f.apply(this, arguments), ms);
+  };
+}
+let f1000 = delay(alert, 1000);
+f1000("test");//4.Создайте декоратор delay(f, ms), который задерживает каждый вызов f на ms миллисекунд.
+    
+    
+function askPassword(ok, fail) {
+  let password = prompt("Password?", '');
+  if (password == "rockstar") ok();
+  else fail();
+}
+let user = {
+  name: 'Вася',
+  loginOk() {
+    alert(`${this.name} logged in`);
+  },
+  loginFail() {
+    alert(`${this.name} failed to log in`);
+  },
+};
+askPassword(user.loginOk, user.loginFail);//5.Вызов askPassword() в приведённом ниже коде должен проверить пароль и затем вызвать user.loginOk/loginFail в зависимости от ответа.
 </script>
 <body>
 </body>
