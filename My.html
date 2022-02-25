@@ -115,6 +115,32 @@ fetch('/article/promise-chaining/user.json')
         let result = s.match(/[^a-m]/g).length + '/' + s.length;
         return result
     }//8. Вывести количество бутв вне диапозона a-m деленое на количество букв в строке
+    
+    
+     function duplicateEncode(word){
+        let arrOfChar = word.toLowerCase().split('');
+        let arr = [];
+        arr.push(arrOfChar[0]);
+        let arrOfDuplicate = [];
+        let result = '';
+        for (let i = 1; i < arrOfChar.length; i++){
+            if (arr.includes(arrOfChar[i])){
+                arrOfDuplicate.push(arrOfChar[i])
+            } else {
+                arr.push(arrOfChar[i])
+            }
+        }
+        for (let j = 0; j < arrOfChar.length; j++){
+            if (arrOfDuplicate.includes(arrOfChar[j])){
+                result += ')'
+            } else {
+                result += '('
+            }
+        }
+        return result;
+    }
+
+    console.log(duplicateEncode("aab"))//9.Заменить символы в строке на ), если символ повтроряющийся и (, если нет (регистр не учитавыется)
 
 </script>
 <body>
