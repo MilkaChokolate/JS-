@@ -141,6 +141,12 @@ fetch('/article/promise-chaining/user.json')
     }
 
     console.log(duplicateEncode("aab"))//9.Заменить символы в строке на ), если символ повтроряющийся и (, если нет (регистр не учитавыется)
+    
+    
+    function isPangram(string){
+        let setOfChar = new Set(string.toLowerCase().match(/[a-z]/g))
+        return setOfChar.size === 26 ? true : false
+    }//10.Проверить, является ли строка панграммой
 
 </script>
 <body>
