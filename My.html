@@ -147,6 +147,30 @@ fetch('/article/promise-chaining/user.json')
         let setOfChar = new Set(string.toLowerCase().match(/[a-z]/g))
         return setOfChar.size === 26 ? true : false
     }//10.Проверить, является ли строка панграммой
+    
+    
+    
+ function changer(str) {
+    let newArr = Array.from(str);
+    let alphabet = ['Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y']
+    
+    for (let i = 0; i < newArr.length; i++){
+        if (alphabet.includes(newArr[i])){
+            newArr.splice(i, 1, alphabet[alphabet.indexOf(newArr[i])+1])
+        }
+    }
+    for (let i = 0; i < newArr.length; i++){
+        if(/[a e i o u]/.test(newArr[i])){
+            newArr.splice(i, 1, newArr[i].toUpperCase());
+        }
+        else {
+            newArr.splice(i, 1, newArr[i].toLowerCase());
+        }
+    }
+    return newArr.join('')
+}
+console.log(changer('Cat30'))
+console.log(changer('Alice'))
 
 </script>
 <body>
